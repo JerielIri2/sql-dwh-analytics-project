@@ -102,6 +102,65 @@ FROM bronze.crm_sales_details
 
 ----------------------------------------------------------------------
 
+--------------------------------------------------------
+--erp cust table
+--------------------------------------------------------
+
+INSERT INTO silver.erp_customer(
+    cid,
+    bdate,
+    gen
+)
+SELECT
+    CASE WHEN cid LIKE 'NAS%' THEN SUBSTRING(cid, 4, LENGTH(cid))
+        ELSE cid
+    END AS cid,
+    CASE WHEN bdate > NOW() THEN NULL
+        ELSE bdate
+    END AS bdate,
+    CASE WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
+        WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
+        ELSE 'Unknown'
+    END AS gen
+FROM bronze.erp_customer;
+
+
+--------------------------------------------------------
+--erp location table
+--------------------------------------------------------
+
+INSERT INTO silver.erp_location (
+    cid,
+    cntry
+)
+
+SELECT
+    REPLACE(cid, '-', '') AS cid,
+    CASE WHEN TRIM(cntry) = 'DE' THEN 'Germany'
+        WHEN TRIM(cntry) IN ('US', 'USA') THEN 'United States'
+        WHEN TRIM(cntry) = '' OR cntry IS NULL THEN 'Unknown'
+        ELSE TRIM(cntry)
+    END AS cntry
+FROM bronze.erp_location;
+
+--------------------------------------------------------
+--erp category table
+--------------------------------------------------------
+
+INSERT INTO silver.erp_category (
+    id,
+    cat,
+    subcat,
+    maintenance
+)
+SELECT
+    id,
+    cat,
+    subcat,
+    maintenance
+FROM bronze.erp_category;
+
+-------------------------------------------------------------------
 
 DROP TABLE IF EXISTS silver.crm_customer_info;
 CREATE TABLE silver.crm_customer_info (
