@@ -102,7 +102,7 @@ BEGIN
     RAISE NOTICE 'Load Duration: % seconds', ROUND(EXTRACT(EPOCH FROM (end_time - start_time))::numeric, 2);
     RAISE NOTICE '----------------';
 
-    batch_end_time = clock_timestamp;
+    batch_end_time := clock_timestamp();
 
     RAISE NOTICE '==================================';
     RAISE NOTICE 'Total Load Duration: % seconds',
