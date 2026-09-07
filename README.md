@@ -4,7 +4,7 @@ Welcome to my Data Warehouse & Analytics Project!
 
 This portfolio project demonstrates an end-to-end data warehousing and analytics solution, from raw data ingestion and transformation to analytical modeling and business insights.
 
-The project follows modern data engineering practices using SQL, ETL, Medallion Architecture, dimensional modeling, and analytics.
+The project follows modern data engineering practices using SQL (PostgreSQL), ETL, Medallion Architecture, dimensional modeling, and analytics.
 
 ---
 
