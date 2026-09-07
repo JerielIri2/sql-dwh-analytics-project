@@ -1,6 +1,6 @@
 /* 
 ============================================================= 
-Create Bronze Tables
+Create Bronze Tables (PostgreSQL)
 ============================================================= 
 Purpose: This script recreates tables in the Bronze schema, used to
 redefine the DDL structure on the Bronze tables
@@ -114,7 +114,7 @@ BEGIN
 END
 $$;
     
--- Using "PSQL Tool" instead of the "Query Tool" to solve "permission" issues:
+-- Alternative: "PSQL Tool" instead of the "Query Tool" to solve "permission" issues:
 
 TRUNCATE TABLE bronze.crm_customer_info;
 \copy bronze.crm_customer_info FROM '[file_path]...cust_info.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
