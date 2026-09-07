@@ -1,6 +1,6 @@
 # Data Warehouse & Analytics Project
 
-Welcome to my Data Warehouse & Analytics Project! 🚀
+Welcome to my Data Warehouse & Analytics Project!
 
 This portfolio project demonstrates an end-to-end data warehousing and analytics solution, from raw data ingestion and transformation to analytical modeling and business insights.
 
@@ -8,7 +8,7 @@ The project follows modern data engineering practices using SQL, ETL, Medallion 
 
 ---
 
-# 📖 Project Overview
+# Project Overview
 
 This project covers four key areas:
 
@@ -19,7 +19,7 @@ Analytics & Reporting — Developing SQL-based analysis to generate actionable b
 
 ---
 
-# 🚀 Data Engineering
+# Data Engineering
 ## Objective
 
 ### Build a modern SQL data warehouse that consolidates sales data from multiple source systems and provides a reliable foundation for analytics and reporting.
@@ -33,7 +33,7 @@ Analytics & Reporting — Developing SQL-based analysis to generate actionable b
 
 ---
 
-# 📊 Analytics & Reporting
+# Analytics & Reporting
 Objective
 
 Develop SQL-based analytics to provide insights into:
@@ -47,7 +47,7 @@ For detailed requirements, see docs/requirements.md.
 
 ---
 
-# 🏗️ Data Architecture
+# Data Architecture
 
 The project follows a Medallion Architecture consisting of Bronze, Silver, and Gold layers:
 
@@ -68,12 +68,12 @@ The project follows a Medallion Architecture consisting of Bronze, Silver, and G
 
 ---
 
-# 🛡️ License
+# License
 
 This project is licensed under the MIT License.
 
 ---
 
-# 🌟 About Me
+# 📊 About Me
 
 Hi, I'm Jeriel, a BI professional passionate about turning data into clear, meaningful insights and building analytics solutions that are both useful and engaging.
